@@ -17,9 +17,9 @@ RUN \
     git \
   && \
   apt-get clean && \
-  rm -rf /var/lib/apt/lists/
+  rm -rf /var/lib/apt/lists/ \
+  && git clone https://github.com/getdnsapi/stubby.git
   
-RUN git clone https://github.com/getdnsapi/stubby.git
 WORKDIR ./stubby
 
 COPY . /usr/src/stubby/
