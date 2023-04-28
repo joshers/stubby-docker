@@ -14,6 +14,7 @@ RUN \
     libssl-dev \
     libunbound-dev \
     libyaml-dev \
+    git \
   && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/
