@@ -18,11 +18,9 @@ RUN \
   && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/ \
-  && git clone https://github.com/getdnsapi/stubby.git
-  
-WORKDIR ./stubby
+  && git clone https://github.com/getdnsapi/stubby.git /stubby
 
-COPY . /usr/src/stubby/
+COPY /stubby /usr/src/stubby/
 WORKDIR /usr/src/stubby/
 
 RUN cmake .
